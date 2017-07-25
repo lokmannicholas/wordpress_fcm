@@ -26,12 +26,12 @@ if (!defined('ABSPATH')) {exit;}
     </tr>
 
     <tr  height="70">
-        <td><label for="post_enable">Enable Save</label> </td>
+        <td><label for="post_enable">Enable Post Notification</label> </td>
         <td><input id="post_enable" name="fcm_post_enable" type="checkbox" value="1" <?php checked( '1', get_option( 'fcm_post_enable' ,"1") ); ?>  /></td>
     </tr>
 
     <tr  height="70">
-        <td><label for="page_enable">Enable Update</label> </td>
+        <td><label for="page_enable">Enable Page Notification</label> </td>
         <td><input id="page_enable" name="fcm_page_enable" type="checkbox" value="1" <?php checked( '1', get_option( 'fcm_page_enable' ,"1") ); ?>  /></td>
     </tr>
 

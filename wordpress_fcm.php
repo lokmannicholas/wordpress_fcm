@@ -2,7 +2,7 @@
 /*
 Plugin Name:Wordpress fcm
 Description:Use Wordpress to send  Notification to mobile vias Firebase
-Version:1
+Version:1.1
 Author:Lokmannicholas
 Author URI:https://github.com/lokmannicholas
 License:GPL2
@@ -79,10 +79,10 @@ Class FCM
             //new post/page
             if (get_post_status($post_id)) {
                     if (get_post_status($post_id) == 'publish') {
-                        if (get_post_type($post_id) == 'post' && get_option('fcm_post_enable') == 1 || empty(get_option('fcm_post_enable')) ) {
+                        if (get_post_type($post_id) == 'post' && (get_option('fcm_post_enable') == 1 )) {
                             $this->fcm_send_notification($content);
 
-                        } elseif (get_post_type($post_id) == 'page'  && get_option('fcm_page_enable') == 1 || empty(get_option('fcm_page_enable')) ) {
+                        } elseif (get_post_type($post_id) == 'page'  && ( get_option('fcm_page_enable') == 1  )) {
                             $this->fcm_send_notification($content);
                         }
 
